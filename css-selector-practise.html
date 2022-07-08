@@ -7,11 +7,11 @@
 
 
     <style>
-      body>p:first-child{color:red}
+      body > p:first-child{color:red}
 
+      p.a:focus[tabindex="1"] {color:blue}
       p.a:hover[tabindex="1"] {color:red}
       p.a:active[tabindex="1"] {color:green}
-      p.a:focus[tabindex="1"] {color:blue}
 
       .c > span {color: red;}
       span > span:first-child {color:green;}
@@ -23,50 +23,35 @@
       a[href *="tel"] {color: yellow;}
       a[href $=".pdf" i ] {font-size: 30px;}
 
-      .a li:nth-child(4) {
-        color: red;
-      }
-      .a li:nth-child(5) {
-        color: red;
-      }
-      .a li:nth-child(6) {
-        color: red;
-      }
+      .a li:nth-child(4) ,
+      .a li:nth-child(5) ,
+      .a li:nth-child(6) ,
       .a li:nth-child(7) {
         color: red;
       }
+
 
       .b li:nth-child(-n + 25) {
         color: red;
       }
 
-      .b li:nth-child(n + 35) {
+      .b li:nth-child(n + 35):nth-child(-n+50) {
         color: blue;
       }
 
-      .b li:nth-child(n + 51) {
-        color: black;
-      }
 
       .b li:nth-child(n+65) {
         color: green;
       }
 
-      .prime li:nth-child(2n+4) {
+      .prime li:nth-child(2n+4) ,
+      .prime li:nth-child(3n+6) ,
+      .prime li:nth-child(5n+25) ,
+      .prime li:nth-child(7n+49) {
         color: red;
       }
 
-      .prime li:nth-child(3n+6) {
-        color: red;
-      }
 
-      .prime li:nth-child(5n+10) {
-        color: red;
-      }
-
-      .prime li:nth-child(7n+14) {
-        color: red;
-      }
 
       .prime li:first-child {
         color: blue;
