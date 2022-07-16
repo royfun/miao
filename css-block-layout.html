@@ -34,6 +34,7 @@
       text-align: center;
       box-sizing: border-box;
       line-height: 34px;
+      font-size: 16px;
       margin-top: 15px;
     }
 
@@ -54,8 +55,10 @@
     }
 
     main {
-      margin: 0 auto;
+      margin: auto;
       width: 600px;
+      text-align: center;
+      font-size: 0;
     }
 
     section {
@@ -83,16 +86,25 @@
       border: 3px solid;
       line-height: 34px;
       /* padding: 10px 72px; */
-      margin: 0 15px;
+      margin: 7.5px 15px;
       box-sizing: border-box;
       font-size: 16px;
+      /* overflow: hidden; */
+    }
+
+    span:first-child {
+      margin-left: 0;
     }
 
     p[class] {
-      text-align: center;
-      margin: 15px;
+      white-space: nowrap;
+      /* text-align: center; */
+      /* margin: 15px;
       font-size: 0;
-      min-width: 630px;
+      min-width: 630px; */
+      /* margin: 0; */
+      /* text-align: center; */
+      /* padding: 0; */
     }
 
     span:hover {
@@ -133,7 +145,8 @@
     <div>产品</div>
     <div>产品</div>
   </main>
-  <br>
+  <hr>
+  <main>
   <p class="A">
     <span>大米</span>
     <span>大米</span>
@@ -157,7 +170,7 @@
     <span>大米</span>
     <span>大米</span>
   </p>
-
+  </main>
 
 
 
