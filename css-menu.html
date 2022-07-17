@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VSC-menu</title>
+  <style>
+    * {
+      /* background-color: rgba(0, 0, 0, 0.1);
+      box-shadow: inset 0 0 1px red; */
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      min-width: 700px;
+    }
+
+    body {
+      background-color: rgb(38, 50, 56);
+    }
+
+
+    div {
+      display: inline-block;
+      position: relative;
+      color: #CCCCCC;
+      height: 24px;
+      margin: 10px;
+    }
+
+    ul {
+      list-style: none;
+      background-color: #3C3C3C;
+      display: none;
+      position: absolute;
+      width: 200px;
+      box-shadow: 0 0 10px 1px rgb(0, 0, 0);
+      border-radius: 6px;
+    }
+
+    div:hover > ul, li:hover > ol {
+      display: block;
+    }
+
+    li:hover {
+      background-color: rgb(110, 54, 54);
+    }
+
+    li {
+      padding: 7px 15px;
+      border-radius: 6px;
+    }
+
+
+    ol {
+      position: fixed;
+      left: 200px;
+      top: 31px;
+      list-style: none;
+      display: none;
+      background-color: #3C3C3C;
+      box-shadow: 0 0 10px 1px black;
+      border-radius: 6px;
+    }
+
+    .jq {
+      position: fixed;
+      left: 280px;
+      top: 31px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: none;
+      background-color: #3C3C3C;
+      box-shadow: 0 0 10px 1px black;
+      border-radius: 6px;
+    }
+
+
+
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="wenjian">
+    文件(F)
+    <ul>
+      <li>
+        新建文本文件
+        <ol>
+          <li>西瓜
+            <ul>
+              <li>aaaaaa</li>
+              <li>aaaaaa</li>
+              <li>aaaaaa</li>
+              <li>aaaaaa</li>
+              <li>aaaaaa</li>
+
+            </ul>
+          </li>
+          <li>西瓜</li>
+          <li>西瓜</li>
+          <li>西瓜</li>
+          <li>西瓜</li>
+          <li>西瓜</li>
+        </ol>
+
+      </li>
+      <li>打开</li>
+      <li>保存</li>
+      <li>退出</li>
+    </ul>
+  </div>
+
+    <div class="bianji">
+      编辑(E)
+      <ul>
+        <li>剪切
+          <ol class="jq">
+            <li>西瓜
+              <ul>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+                <li>aaaaaa</li>
+
+              </ul>
+            </li>
+            <li>西瓜</li>
+            <li>西瓜</li>
+            <li>西瓜</li>
+            <li>西瓜</li>
+            <li>西瓜</li>
+          </ol>
+        </li>
+        <li>复制</li>
+        <li>粘贴</li>
+        <li>在文件中查找</li>
+      </ul>
+</div>
+
+      <div>选择(S)</div>
+      <div>查看(V)</div>
+      <div>转到(G)</div>
+      <div>运行(R)</div>
+      <div>终端(T)</div>
+      <div>帮助(H)</div>
+    </header>
+
+
+</body>
+</html>
