@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      /* background-color: rgba(0, 0, 0, 0.08);
+      box-shadow: inset 0 0 1px red; */
+      margin: 0;
+    }
+    html {
+      height: 100%;
+    }
+
+    body {
+      height: 100%;
+    }
+
+    div img {
+      /* display: none; */
+      opacity: 0;
+      transition: 1s;
+      position: absolute;
+      width: 100%;
+
+    }
+
+    .imgs {
+      /* width: 2452px;
+      height: 920px; */
+
+      /* max-width: 100%; */
+    }
+
+    section {
+      position: relative;
+      /* border: 5px solid blue; */
+      width: 100%;
+      height: 100%;
+    }
+
+    section input {
+      /* position: relative; */
+      /* top: 300px; */
+      /* z-index: 8; */
+    }
+
+    .indicators {
+      position: absolute;
+      top: 5%;
+      left: 5%;
+      /* z-index: 8; */
+    }
+
+    .indicators label {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid rgb(200, 200, 200);
+      background-color: rgb(19, 17, 17);
+      cursor: pointer;
+      /* z-index: 89; */
+      /* position: relative; */
+    }
+
+    input {
+      display: none;
+    }
+
+    input:nth-child(1):checked ~ .indicators :nth-child(1),
+    input:nth-child(2):checked ~ .indicators :nth-child(2),
+    input:nth-child(3):checked ~ .indicators :nth-child(3),
+    input:nth-child(4):checked ~ .indicators :nth-child(4) {
+      background-color: rgb(197, 197, 197);
+    }
+
+    input:nth-child(1):checked ~ div img:nth-child(1),
+    input:nth-child(2):checked ~ div img:nth-child(2),
+    input:nth-child(3):checked ~ div img:nth-child(3),
+    input:nth-child(4):checked ~ div img:nth-child(4) {
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <section>
+    <input type="radio" id="r1-1" name="radio1" checked>
+    <input type="radio" id="r1-2" name="radio1">
+    <input type="radio" id="r1-3" name="radio1">
+    <input type="radio" id="r1-4" name="radio1">
+
+    <div class="imgs">
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/ce029906e8b21a65cc3ec4966e61ff7d.jpg" alt="">
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/36b45c624f42fa81732457e3f9773dbd.jpg" alt="">
+      <img src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/a4a9874bfad4fe4c4592bf2e535208be.jpeg" alt="">
+      <img src="" alt="">
+    </div>
+
+    <div class="indicators">
+      <label for="r1-1"></label>
+      <label for="r1-2"></label>
+      <label for="r1-3"></label>
+      <!-- <label for="r1-4"></label> -->
+    </div>
+  </section>
+</body>
+</html>
