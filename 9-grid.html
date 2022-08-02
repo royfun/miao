@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+    }
+
+    h2 {
+      text-align: center;
+      padding: 1em;
+    }
+
+    table {
+      margin: auto;
+      /* border: 5px solid blue; */
+      width: 150px;
+      height: 150px;
+      text-align: center;
+      color: green;
+      border-collapse: collapse;
+    }
+
+    col,tr {
+    border: 5px solid blue;
+    }
+
+    td:hover {
+      border: 5px solid red;
+      cursor:pointer;
+    }
+
+    .inline {
+      font-size: 0;
+    }
+
+    main {
+      text-align: center;
+    }
+
+    span {
+      display: inline-block;
+      border: 5px solid blue;
+      width: 50px;
+      height: 50px;
+      box-sizing: border-box;
+      font-size: 16px;
+      line-height: 40px;
+      text-align: center;
+      color: green;
+      margin: 0 -5px -5px 0;
+    }
+
+    span:hover {
+      border: 5px solid red;
+      position: relative;
+    }
+
+
+   .flex {
+      display: flex;
+      flex-wrap: wrap;
+      width: 170px;
+      height: 270px;
+      margin: auto;
+      cursor: pointer;
+      align-content: flex-start;
+    }
+
+    .flex div {
+      border: 5px solid blue;
+      /* box-sizing: border-box; */
+      width: 50px;
+      height: 50px;
+      line-height: 45px;
+      margin: 0 -5px -5px 0;
+      text-align: center;
+      color: green;
+      position: relative;
+    }
+
+    .flex div:hover {
+      border: 5px solid red;
+      z-index: 8;
+    }
+
+    .float {
+      width: 170px;
+      display: flow-root;
+      margin: auto;
+      overflow: hidden;
+      padding-bottom: 5px;
+      background-color: pink;
+
+    }
+
+    .float div {
+      float: left;
+      width: 50px;
+      height: 50px;
+      /* box-sizing: border-box; */
+      border: 5px solid blue;
+      margin: 0 -5px -5px 0;
+      position: relative;
+
+    }
+
+    .float div:hover {
+      border: 5px solid red;
+      z-index: 8;
+    }
+
+    .big {
+      display: table-cell;
+      width: 400px;
+      height: 100px;
+      transition: 1s;
+      /* position: relative;
+      vertical-align: bottom; */
+      display: flex;
+      align-items: flex-end;
+      margin: auto;
+      margin-top: 50px;
+    }
+
+    .big:hover {
+      font-size: 3em;
+      cursor: pointer;
+    }
+
+
+  </style>
+</head>
+<body>
+  <h2>table elements layout</h2>
+  <table>
+    <col>
+    <col>
+    <col>
+    <tr>
+      <td>1</td>
+      <td>2</td>
+      <td>3</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>5</td>
+      <td>6</td>
+    </tr>
+    <tr>
+      <td>7</td>
+      <td>8</td>
+      <td>9</td>
+  </tr>
+  </table>
+
+  <h2>inline-block elements layout</h2>
+  <main class="inline">
+    <p class="a">
+      <span>1</span>
+      <span>2</span>
+      <span>3</span>
+    </p>
+    <p class="b">
+      <span>4</span>
+      <span>5</span>
+      <span>6</span>
+    </p>
+    <p class="c">
+      <span>7</span>
+      <span>8</span>
+      <span>9</span>
+    </p>
+  </main>
+
+  <h2>flex elements layout</h2>
+  <section class="flex">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </section>
+
+  <h2>float elements layout</h2>
+  <div class="float">
+    <div>1</div>
+    <div>2</div>
+    <div>3</div>
+    <div>4</div>
+    <div>5</div>
+    <div>6</div>
+    <div>7</div>
+    <div>8</div>
+    <div>9</div>
+  </div>
+  <span class="big">订阅博客</span>
+</body>
+</html>

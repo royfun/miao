@@ -1,3 +1,16 @@
 Hello World!
 
 try
+
+https://jsbin.com/notexos/2/edit?html,css,output
+文字超出渐变消失
+
+
+https://jsbin.com/beyoped/3/edit?html,css,output
+css species拆解
+
+https://jsbin.com/kikumob/3/edit?html,css,output
+marching ants 动效
+
+https://jsbin.com/yigenap/3/edit?html,css,output
+纯css实现hover切换选项卡
