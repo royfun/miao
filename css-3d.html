@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>3D立方体</title>
+  <style>
+    body {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .cube {
+      width: 300px;
+      height: 300px;
+      perspective: 900px;
+    }
+    main {
+      width: 100%;
+      height: 100%;
+      transform: translateZ(-150px);
+      transform-style: preserve-3d;
+      animation: rotate 15s linear infinite;
+    }
+    @keyframes rotate {
+      from {
+        transform: rotateX(0) rotateY(0);
+      }
+      to {
+          transform: rotateX(360deg) rotateY(360deg);
+      }
+    }
+    .cube div{
+      width: 100%;
+      height: 100%;
+      position: absolute;
+    }
+    .front {
+      background-image: url(http://mms0.baidu.com/it/u=3628380578,2776573276&fm=253&app=120&f=JPEG&fmt=auto&q=75?w=500&h=500);
+      background-size: 300px 300px;
+      transform: translateZ(150px);
+      border: 1px solid hotpink;
+    }
+
+    .back {
+      background: rgba(12, 177, 177, 0.5);
+      transform: translateZ(-150px);
+      border: 1px solid hotpink;
+    }
+
+    .left {
+      background-image: url(https://img.syt5.com/2020/0622/20200622094100527.jpg.420.420.jpg);
+      background-size: 300px 300px;
+      transform: rotateY(-90deg) translateZ(150px);
+      border: 1px solid hotpink;
+    }
+
+    .right {
+      background-image: url(http://mms1.baidu.com/it/u=2816216310,3957176735&fm=253&app=120&f=JPEG);
+      background-size: 300px 300px;
+      transform: rotateY(90deg) translateZ(150px) ;
+      backface-visibility: hidden;
+      border: 1px solid hotpink;
+    }
+
+    .top {
+      background: rgba(1000, 0, 0, 0.5);
+      transform: rotateX(90deg) translateZ(150px);
+      border: 1px solid hotpink;
+    }
+
+    .bottom {
+      background: rgba(0, 0, 1000, 0.5);
+      transform: rotateX(-90deg) translateZ(150px);
+      border: 1px solid hotpink;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="cube">
+    <main>
+        <div class="front"></div>
+        <div class="back"></div>
+        <div class="left"></div>
+        <div class="right"></div>
+        <div class="top"></div>
+        <div class="bottom"></div>
+    </main>
+  </div>
+</html>
