@@ -411,14 +411,66 @@
 
 
 <script type="" id="ch0105/01">
-  var sum
-  var num
-  for (var i = 1; i <= num; i++) {
-        //依次输入当前学生的成绩
-        var fen = Number(prompt("请输入第" + i + "个同学的成绩"))
-            //把成绩累加到sum里面
-        sum += fen;
-    }
-  average = sum / num
-  console.log(average)
+  var i = Number(prompt());
+  var k= i;
+  var sum = 0;
+  for(i;i>0;i--){
+    var j = Number(prompt());
+    sum +=j;
+  }
+  console.log((sum/k).toFixed(2));
+</script>
+
+<script type="" id="ch0105/02">
+  var sum = 0;
+  for(i=1;i<13;i++){
+    var j = Number(prompt());
+    sum +=j;
+  }
+  i = 12;
+  console.log('$' + (sum/i).toFixed(2));
+</script>
+
+<script type="" id="ch0105/03">
+  var i = Number(prompt());
+  var k= i;
+  var sum = 0;
+  for(i;i>0;i--){
+    var j = Number(prompt());
+    sum += j;
+  }
+  console.log((sum/k).toFixed(4));
+</script>
+
+<!-- <script type="" id="ch0105/04">
+  var i = Number(prompt());
+  var k= i;
+  var sum = 0;
+  for(i;i>0;i--){
+    var j = Number(prompt());
+    sum += j;
+  }
+  console.lovg(sum + ' ' + (sum/k).toFixed(5));
+</script> -->
+
+<script type="" id="ch0105/04">
+  let n = +prompt();
+  let a = [];
+  let c = 0;
+  for (let i = 0; i < n; i++) {
+    a[i] = +prompt();
+    c += a[i];
+  }
+  console.log(c + ' ' + (c / n).toFixed(5));
+</script>
+
+<script type="" id="ch0105/05">
+  let n = +prompt();
+  let a = [];
+  let c = 0;
+  for (let i = 0; i < n; i++) {
+    a[i] = +prompt();
+    if (a[i] > c) c = a[i];
+  }
+  console.log(c);
 </script>
