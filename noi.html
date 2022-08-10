@@ -474,3 +474,96 @@
   }
   console.log(c);
 </script>
+
+<script type="" id="ch0105/06">
+  let n = +prompt();
+  let a = [];
+  let max = 0;
+  let min = 0;
+  for (let i = 0; i < n; i++) {
+    a[i] = +prompt();
+    if (a[i] > max) max = a[i];
+    if (a[i] < min) min = a[i];
+  }
+  console.log(max - min);
+</script>
+
+<script type="" id="ch0105/07">
+  let n = +prompt();
+  let a = [];
+  let b = [];
+  let c = [];
+  let A = 0;
+  let B = 0;
+  let C = 0;
+  for (let i = 0; i < n; i++) {
+    a[i] = +prompt();
+    b[i] = +prompt();
+    c[i] = +prompt();
+    A += a[i]
+    B += b[i]
+    C += c[i]
+  }
+  console.log(A + ' ' + B + ' ' + C + ' ' + (A + B + C));
+</script>
+
+<script type="" id="ch0105/08">
+  let n = +prompt();
+  let a = []
+  let c = 0;
+  for (let i = 0; i < n - 1; i++) {
+    a[i] = +prompt();
+    c += a[i];
+  }
+  console.log((n-2) * 180 - c);
+</script>
+
+<script type="" id="ch0105/08">
+  let n = +prompt();
+  let a = []
+  let c = 0;
+  for (let i = 0; i < n - 1; i++) {
+    a[i] = +prompt();
+    c += a[i];
+  }
+  console.log((n-2) * 180 - c);
+</script>
+
+<script type="" id="ch0105/09">
+  let m = +prompt();
+  let n = +prompt();
+  let c = 0;
+  for (let i = m; i <= n; i++) {
+    if (i % 2 === 1) {
+      c += i
+    }
+  }
+  console.log(c);
+</script>
+
+<script type="" id="ch0105/10">
+  let m = +prompt();
+  let n = +prompt();
+  let c = 0;
+  for (let i = m; i <= n; i++) {
+    if (i % 17 === 0) {
+      c += i
+    }
+  }
+  console.log(c);
+</script>
+
+<script type="" id="ch0105/11">
+  let n = +prompt();
+  let a = []
+  let one = 0;
+  let five = 0;
+  let ten = 0;
+  for (let i = 0; i <= n; i++) {
+    a[i] = +prompt();
+    if (a[i] === 1) one++
+    if (a[i] === 5) five++
+    if (a[i] === 10) ten++
+  }
+  console.log(one + ' ' + five + ' ' + ten);
+</script>
