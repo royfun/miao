@@ -35,13 +35,22 @@ var royfun = function () {
         res.push(it)
       }
     })
+    return res
   }
 
+  function drop(array, n = 1) {
+    let res = []
+    for (let i = n; i < array.length; i++) {
+      res.push(array[i])
+    }
+    return res
+  }
 
   return {
     chunk,
     compact,
-    concat
+    concat,
+    drop
 
 
   }
