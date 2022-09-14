@@ -1,6 +1,6 @@
-var royfun = function () {
+var royfun = {
 
-  function chunk(array, size = 1) {
+  chunk: function (array, size = 1) {
     let result = []
     for (let i = 0; i < array.length;) {
       let group = []
