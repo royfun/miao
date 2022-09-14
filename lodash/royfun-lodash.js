@@ -46,53 +46,36 @@ var royfun = function () {
     return res
   }
 
+  function fill(array, value, start = 0, end = array.length) {
+    if (arguments.length == 2) {
+      for (let i = 0; i < array.length; i++) {
+        array[i] = value
+      }
+    } else if (arguments.length == 3) {
+      for (let i = start; i < array.length; i++) {
+        array[i] = value
+      }
+    } else {
+      for (let i = start; i < end; i++) {
+        array[i] = value
+      }
+    }
+    return array
+  }
+
+
+
+
+
+
   return {
-    compact,
     chunk,
+    compact,
+    concat,
     fill,
     drop,
-    findIndex,
-    findLastIndex,
-    flatten,
-    flattenDeep,
-    flattenDepth,
-    fromPairs,
-    head,
-    indexOf,
-    lastIndexOf,
-    initial,
-    join,
-    last,
-    pull,
-    reverse,
-    every,
-    some,
-    countBy,
-    groupBy,
-    keyBy,
-    forEach,
-    map,
-    filter,
-    reduce,
-    reduceRight,
-    size,
-    sortBy,
-    sample,
-    isUndefined,
-    isNull,
-    isNil,
-    max,
-    min,
-    maxBy,
-    minBy,
-    round,
-    sumBy,
-    flagMap,
-    flatMapDepth,
-    get,
-    has,
-    mapKeys,
-    mapValues
+    fill,
+
 
 
   }
