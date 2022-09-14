@@ -29,7 +29,7 @@ var royfun = function () {
   function concat(array, ...values) {
     let res = []
     values.forEach(it => {
-      if (isArray(it)) {
+      if (Array.isArray(it)) {
         res.push(...it)
       } else {
         res.push(it)
@@ -63,8 +63,22 @@ var royfun = function () {
     return array
   }
 
-  function findIndex(array, f, findIndex) {
+  function findIndex(array, f, findIndex = 0) {
 
+  }
+
+  function flatten(array) {
+    let res = []
+    for (let i = 0; i < array.length; i++) {
+      if (Array.isArray(array[i])) {
+        for (let j = 0; j < array[i].length; i++) {
+          res.push(array[i][j])
+        }
+      } else {
+        res.push(array[i])
+      }
+    }
+    return res
   }
 
 
@@ -78,6 +92,8 @@ var royfun = function () {
     concat,
     drop,
     fill,
+    findIndex
+    flatten
 
 
 
