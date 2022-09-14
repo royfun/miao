@@ -19,7 +19,7 @@ var royfun = function () {
 
 
   return {
-    chunk,
+    chunk
   }
 
-} ()
+}()
