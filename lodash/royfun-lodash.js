@@ -27,7 +27,7 @@ var royfun = function () {
   }
 
   function concat(array, ...values) {
-    let res = slice(array)
+    let res = []
     values.forEach(it => {
       if (isArray(it)) {
         res.push(...it)
@@ -63,6 +63,10 @@ var royfun = function () {
     return array
   }
 
+  function findIndex(array, f, findIndex) {
+
+  }
+
 
 
 
@@ -72,9 +76,10 @@ var royfun = function () {
     chunk,
     compact,
     concat,
-    fill,
     drop,
     fill,
+
+
 
 
 
