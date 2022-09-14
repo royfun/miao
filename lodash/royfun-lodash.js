@@ -16,8 +16,10 @@ var royfun = function () {
     return result
   }
 
+
+
   return {
     chunk,
   }
 
-}
+} ()
