@@ -1,0 +1,46 @@
+<script>
+  var result = 1
+  var factorial = function(x) {
+    for (i = 1;i <= x;i++) {
+      result *= i
+    }
+    return result
+  }
+  factorial(5)
+</script>
+
+<script>
+// 判断n是否与7有关(7的倍数或者各个位上含有7)
+// 返回true或者是false
+  var has7 = function(n) {
+    if (n % 7 == 0) {
+      return true
+    }
+
+    while (n > 0) {
+      var ge = n % 10
+      if (ge == 7) {
+        return true
+      }
+      n = (n - ge) / 10
+    }
+
+    return false
+
+  }
+
+  has7(22)
+</script>
+
+<script>
+  var triangle = function (size) {
+    var str =''
+    var line =''
+    for (var i = 0; i < size; i++) {
+      line += '#'
+      str += line + '\n'
+    }
+    return str
+  }
+  triangle(18)
+</script>

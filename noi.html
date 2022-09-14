@@ -1708,6 +1708,69 @@ console.log(count)
 console.log(sum)
 </script> -->
 
+</script>
+<script type="" id="ch0105/42"> // 谢版
+  var h = Number(prompt())
+  var w = Number(prompt())
+  var char = prompt()
+  var fill = Number(prompt())
+
+  var edgeLine = char // 边缘的行
+  var midLine = char // 中间的那些行
+  for (var i = 1; i < w - 1; i++) {
+    edgeLine += char
+    if (fill) {
+      midLine += char
+    } else {
+      midLine += ' '
+    }
+  }
+  edgeLine += char
+  midLine += char
+
+  var result = edgeLine + '\n'
+  for (var j = 1; j < h - 1; j++) {
+    result += midLine + '\n'
+  }
+  result += edgeLine
+
+  console.log(result)
+</script>
+<script type="" id="ch0105/42">
+  var h = Number(prompt())
+  var w = Number(prompt())
+  var char = prompt()
+  var fill = Number(prompt())
+
+  var result = ''
+
+  // 遍历处理每一行
+  for (var i = 0; i < h; i++) {
+
+    // 处理第i行的每个字符
+    for (var j = 0; j < w; j++) {
+      // 如果处于边缘，则拼指定的符号
+      if (i == 0 || j == 0 || i == h - 1 || j == w - 1) {
+        result += char
+      } else { // 否则，看是否填充
+        // 如果填充，就拼指定的符号
+        if (fill) {
+          result += char
+        } else { // 否则就拼空格
+          result += ' '
+        }
+      }
+    }
+    // 不是最后一行时，才在行尾加上一个回车
+    if (i !== h - 1) {
+      result += '\n'
+    }
+  }
+
+  console.log(result)
+
+
+</script>
 
 <script id="ch0105/42" type="x">
   let y = Number(prompt('输入数字'))
@@ -1823,6 +1886,10 @@ console.log(sum)
 </script>
 
 <script type="" id="weekday">
+
+</script>
+
+<script type="" id="weekday">
   let year = +prompt();
   let month = +prompt();
   let time = new Date(year, month - 1, 1);
@@ -1854,6 +1921,8 @@ console.log(sum)
     c = 0;
   }
 </script>
+
+
 
 <script type="" id="prime">
   let x = +prompt();
@@ -1887,11 +1956,38 @@ console.log(sum)
   }
 </script>
 
+
 <script type="x" id="itob">
   let x = +prompt();
 
   console.log(x.toFixed(x.length));
 </script>
+
+
+<script id="itob">
+  var n = +prompt();
+  var str = ''
+  do {
+    var ge = n % 10
+    str = ge + str
+    n = (n - ge) / 10
+  }while (n > 0)
+
+  console.log(str)
+
+</script>
+
+<script id="itob">
+  var n = +prompt();
+  var str = ''
+  do {
+    var ge = n % 10
+    str = ge + str
+    n = (n - ge) / 10
+  }while (n > 0)
+
+</script>
+
 
 <script type='x' id="lcf&lcm">
   let m = +prompt();
@@ -1917,6 +2013,28 @@ console.log(sum)
   console.log(lcf, lcm);
 </script>
 
+<script id="lcf&lcm"> // 谢版
+
+  function littlestCommonMultiple(m, n) {
+    return m * n / largestCommonFactor(m, n)
+  }
+  // 最大公约数
+  function largestCommonFactor(m, n) {
+    var min = m > n ? n : m
+
+    // 从较小的数开始向下尝试
+    // 如果遇到任何一个能同时被m和n整除的数，则就是答案
+    for (var x = min; x >= 1; x--) {
+      if (m % x == 0 && n % x == 0) {
+        return x
+      }
+    }
+  }
+
+  // 使用辗转相减/除法计算最大公约数
+
+</script>
+
 <script type='x' id="sqrt">
   let n = +prompt();
   let solution = n;
@@ -1928,4 +2046,47 @@ console.log(sum)
   }
 
   console.log(solution.toFixed(3));
+</script>
+
+
+<script id="sqrt"> // 开根号
+  // function sqrt(n) {
+  //   for (var i = 0; ; i+= 0.000000000000000000001) {
+  //     if (i * i - n)
+  //   }
+  // }
+
+  // 二分法
+  // 设置一个上下限，然后每次排除一半的可能性
+  // 一路向结果逼近
+  function sqrt(n) {
+    var low = 0
+    var high = Math.max(n, 2)
+
+    while (high - low > 0.000000001) {
+      var middle = (low + high) / 2
+      // 如果middle大于根号n
+      if (middle * middle > n) {
+        // 说明根号n在0到middle之间
+        high = middle
+      // 如果middle小于根号n
+      } else if (middle * middle < n) {
+        // 说明根号n在middle到high之间
+        low = middle
+      } else if (middle * middle == n) {
+        return middle
+      }
+    }
+    return (high + low) / 2
+  }
+
+
+  // 效率更高的方法 牛顿法
+  function sqrt(n) {
+    var x = n
+    while (Math.abs(x * x - n) > 0.0000000000001) {
+      x = (x + n / x) / 2
+    }
+    return x
+  }
 </script>
