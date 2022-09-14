@@ -92,7 +92,7 @@ var royfun = function () {
     concat,
     drop,
     fill,
-    findIndex
+    findIndex,
     flatten
 
 
