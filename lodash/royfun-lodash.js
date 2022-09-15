@@ -151,7 +151,26 @@ var royfun = function () {
   }
 
   function initial(arr) {
-    return arr.pop()
+    arr.pop()
+    return arr
+  }
+
+  function pull(arr, val) {
+    let res = []
+    for (let item of arr) {
+      if (item !== val) {
+        res.push[item]
+      }
+    }
+    return res
+  }
+
+  function join(arr,str) {
+    let res = ''
+    for (let item of arr) {
+      res += item + str
+    }
+    return res.slice(0, res.length - 1)
   }
 
 
@@ -176,6 +195,8 @@ var royfun = function () {
     head,
     indexOf,
     initial,
+    pull,
+    join
 
 
 
