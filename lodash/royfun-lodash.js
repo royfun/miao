@@ -174,6 +174,31 @@ var royfun = function () {
     return res.slice(0, res.length - 1)
   }
 
+  function reverse(arr) {
+    let left = 0
+    let right = arr.length - 1
+    while (left < right) {
+      let temp = arr[right]
+      arr[right] = arr[left]
+      arr[left] = temp
+      left++
+      right--
+    }
+    return arr
+  }
+
+  function last(arr) {
+    return arr[arr.length - 1]
+  }
+
+  function nth(arr, n = 0) {
+    if (n < 0) {
+      return arr[arr.length + n]
+    } else {
+      return arr[n]
+    }
+  }
+
 
 
 
@@ -199,7 +224,10 @@ var royfun = function () {
     indexOf,
     initial,
     pull,
-    join
+    join,
+    reverse,
+    last,
+    nth
 
 
 
