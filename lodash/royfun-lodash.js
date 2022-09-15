@@ -97,6 +97,29 @@ var royfun = function () {
     return res
   }
 
+  function flattenDepth(array, depth = 1) {
+    let res = array
+    let temp = []
+    while (true) {
+      let hasArray = false
+      for (let i of res) {
+        if (Array.isArray(i)) {
+          temp.push(...i)
+          hasArray = true
+        } else {
+          temp.push(i)
+        }
+      }
+      res = temp
+      temp = []
+      depth--
+      if (depth == 0 || hasArray == false) break
+    }
+    return res
+  }
+
+
+
 
 
 
