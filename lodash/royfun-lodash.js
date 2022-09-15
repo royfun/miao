@@ -27,7 +27,7 @@ var royfun = function () {
   }
 
   function concat(array, ...values) {
-    let res = []
+    let res = array
     values.forEach(it => {
       if (Array.isArray(it)) {
         res.push(...it)
@@ -132,7 +132,9 @@ var royfun = function () {
     drop,
     fill,
     findIndex,
-    flatten
+    flatten,
+    flattenDeep,
+    flattenDepth
 
 
 
