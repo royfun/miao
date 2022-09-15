@@ -155,20 +155,20 @@ var royfun = function () {
     return arr
   }
 
-  function pull(arr, val) {
+  function pull(arr, ...val) {
     let res = []
     for (let item of arr) {
-      if (item !== val) {
+      if (!val.includes(item)) {
         res.push[item]
       }
     }
     return res
   }
 
-  function join(arr,str) {
+  function join(arr,str = ',') {
     let res = ''
     for (let item of arr) {
-      res += item + str
+      res += item + `${str}`
     }
     return res.slice(0, res.length - 1)
   }
