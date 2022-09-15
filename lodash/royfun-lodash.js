@@ -81,6 +81,22 @@ var royfun = function () {
     return res
   }
 
+  function flattenDeep(array) {
+    let res = []
+    for (let i = 0; i < array.length; i++) {
+      let item = array[i]
+      if (Array.isArray(item)) {
+        let temp = flattenDeep(item)
+        for (let j = 0; j < temp.length; j++) {
+          res.push(temp[j])
+        }
+      } else {
+        res.push(array[i])
+      }
+    }
+    return res
+  }
+
 
 
 
@@ -101,4 +117,10 @@ var royfun = function () {
 
   }
 
-} ()
+}()
+
+// compact,chunk,fill,drop,findIndex,findLastIndex,flatten,flattenDeep,flattenDepth
+// fromPairs,head,indexOf,lastIndexOf,initial,join,last,pull,reverse,every,some
+// countBy,groupBy,keyBy,forEach,map,filter,reduce,reduceRight,size,sortBy,sample,
+// isUndefined,isNull,isNil,max,min,maxBy,minBy,round,sumBy
+// flagMap,flatMapDepth,get,has,mapKeys,mapValues
