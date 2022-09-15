@@ -118,6 +118,42 @@ var royfun = function () {
     return res
   }
 
+  function fromPairs(pairs) {
+    let res = {}
+    for (let i = 0; i < pairs.length; i++) {
+      res[pairs[i][0]] = pairs[i][1]
+    }
+    return res
+  }
+
+  function toPairs(object) {
+    let res = []
+    for (let i in object) {
+      let temp = []
+      temp.push(i)
+      temp.push(object[i])
+      res.push(temp)
+    }
+    return res
+  }
+
+  function head(array) {
+    return array[0]
+  }
+
+  function indexOf(arr, val, index = 0) {
+    for (let i = index; i < arr.length; i++) {
+      if (arr[i] == val) {
+        return i
+      }
+    }
+    return -1
+  }
+
+  function initial(arr) {
+    return arr.pop()
+  }
+
 
 
 
@@ -134,7 +170,13 @@ var royfun = function () {
     findIndex,
     flatten,
     flattenDeep,
-    flattenDepth
+    flattenDepth,
+    fromPairs,
+    toPairs,
+    head,
+    indexOf,
+    initial,
+
 
 
 
