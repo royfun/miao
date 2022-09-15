@@ -160,7 +160,7 @@ var royfun = function () {
     for (let i = 0; i < arr.length; i++) {
       let temp = arr[i]
       if (!val.includes(temp)) {
-        res.push[temp]
+        res.push(temp)
       }
     }
     return res
@@ -199,6 +199,26 @@ var royfun = function () {
     }
   }
 
+  function min(array) {
+    let min = array[0]
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] < min) {
+            min = array[i]
+        }
+    }
+    return min
+  }
+
+  function max(array) {
+    var max = array[0]
+    for (var i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i]
+        }
+    }
+    return max
+  }
+
 
 
 
@@ -227,7 +247,10 @@ var royfun = function () {
     join,
     reverse,
     last,
-    nth
+    nth,
+    every,
+    min,
+    max
 
 
 
