@@ -157,9 +157,10 @@ var royfun = function () {
 
   function pull(arr, ...val) {
     let res = []
-    for (let item of arr) {
-      if (!val.includes(item)) {
-        res.push[item]
+    for (let i = 0; i < arr.length; i++) {
+      let temp = arr[i]
+      if (!val.includes(temp)) {
+        res.push[temp]
       }
     }
     return res
@@ -172,6 +173,8 @@ var royfun = function () {
     }
     return res.slice(0, res.length - 1)
   }
+
+
 
 
 
