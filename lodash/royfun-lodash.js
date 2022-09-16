@@ -219,6 +219,29 @@ var royfun = function () {
     return max
   }
 
+  function sample(arr) {
+    let temp = Math.floor(Math.random() * (arr.length - 1))
+    return arr[temp]
+  }
+
+  function round(n) {
+
+  }
+
+  function zip(...arrays) {
+    let res = []
+    for (let i in arrays[0]) {
+      let item = []
+      for (let j in arrays) {
+        item.push(arrays[j][i])
+      }
+      res.push(item)
+    }
+    return res
+  }
+
+
+
 
 
 
@@ -249,7 +272,10 @@ var royfun = function () {
     last,
     nth,
     min,
-    max
+    max,
+    sample,
+    round,
+    zip
 
 
 
