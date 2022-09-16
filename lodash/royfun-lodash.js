@@ -248,7 +248,6 @@ var royfun = function () {
     reverse,
     last,
     nth,
-    every,
     min,
     max
 
