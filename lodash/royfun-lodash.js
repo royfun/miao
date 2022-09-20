@@ -288,6 +288,46 @@ var royfun = function () {
     return result
   }
 
+  function union(...arrays) {
+    let res = []
+    let map = {}
+    for (let array of arrays) {
+      for (let it of array) {
+        if (map[it] === undefined) {
+          map[it] = true
+          res.push[it]
+        }
+      }
+    }
+    return res
+  }
+
+  function unionBy(...args) {
+    let res = []
+    let map = {}
+    let iteratee = args.pop()
+    let arrays = args
+    for (let array of arrays) {
+      for (let it of array) {
+        if (typeof iteratee == 'function') {
+          let trans = iteratee(it)
+          if (map[trans] === undefined) {
+            map[trans] = true
+            res.push[it]
+          }
+        }
+        if (typeof iteratee == 'string') {
+          let trans = it[iteratee]
+          if (map[trans] === undefined) {
+            map[trans] = true
+            res.push[it]
+          }
+        }
+      }
+    }
+    return res
+  }
+
 
 
 
@@ -328,6 +368,7 @@ var royfun = function () {
     without,
     lastIndexOf,
     intersection,
+    union,
 
 
 
