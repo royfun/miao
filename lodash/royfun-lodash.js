@@ -369,6 +369,8 @@ var royfun = function () {
     lastIndexOf,
     intersection,
     union,
+    unionBy,
+
 
 
 
