@@ -220,8 +220,9 @@ var royfun = function () {
   }
 
   function sample(arr) {
-    let temp = Math.floor(Math.random() * (arr.length - 1))
-    return arr[temp]
+    let len = arr.length
+    let randomIdex = Math.floor(Math.random() * len)
+    return arr[randomIdex]
   }
 
   function round(n) {
@@ -238,6 +239,53 @@ var royfun = function () {
       res.push(item)
     }
     return res
+  }
+
+  function uniq(arr) {
+    let res = []
+    for (let i = 0; i < arr.length; i++) {
+      if (!res.includes(arr[i])) {
+        res.push(arr[i])
+      }
+    }
+    return res
+  }
+
+  function without(array, ...values) {
+    let result = []
+    for (let item of array) {
+        if (!values.includes(item)) {
+            result.push(item)
+        }
+    }
+    return result;
+  }
+
+  function lastIndexOf(arr, val, index = arr.length - 1) {
+    for (let i = index; i > 0; i--) {
+      if (arr[i] == val) {
+        return i
+      }
+    }
+    return -1
+  }
+
+  function intersection(...arrays) {
+    let result = []
+    let comp = arrays[0]
+    for (let i = 0; i < comp.length; i++) {
+      let hasItem = true
+      for (let j = 1; j < arrays.length; j++) {
+        if (!arrays[j].includes(comp[i])) {
+          hasItem = false
+          break
+        }
+      }
+      if (hasItem == true) {
+        result.push(comp[i])
+      }
+    }
+    return result
   }
 
 
@@ -275,7 +323,11 @@ var royfun = function () {
     max,
     sample,
     round,
-    zip
+    zip,
+    uniq,
+    without,
+    lastIndexOf,
+    intersection,
 
 
 
