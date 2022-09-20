@@ -201,7 +201,7 @@ var royfun = function () {
 
   function min(array) {
     let min = array[0]
-    for (var i = 0; i < array.length; i++) {
+    for (let i = 0; i < array.length; i++) {
         if (array[i] < min) {
             min = array[i]
         }
@@ -210,8 +210,8 @@ var royfun = function () {
   }
 
   function max(array) {
-    var max = array[0]
-    for (var i = 0; i < array.length; i++) {
+    let max = array[0]
+    for (let i = 0; i < array.length; i++) {
         if (array[i] > max) {
             max = array[i]
         }
